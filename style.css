@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Manrope", sans-serif;
+}
+
+main {
+	height: 100vh;
+	width: 100vw;
+	background-color: hsl(218, 23%, 16%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	max-width: clamp(50vw, 650px, 100vw);
+	min-height: min(50vh, 200px);
+	position: relative;
+	background-color: hsl(217, 19%, 24%);
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 1rem;
+}
+.advice-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+h1 {
+	color: hsl(150, 100%, 66%);
+	width: fit-content;
+	font-size: 0.5rem;
+	letter-spacing: 0.2rem;
+}
+p {
+	width: 90%;
+	min-height: fit-content;
+	color: hsl(193, 38%, 86%);
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+.desktop {
+}
+.mobile {
+	display: none;
+}
+.button {
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	bottom: -1.5rem;
+	margin-top: 1rem;
+	border-radius: 50%;
+	border: 0px transparent;
+	outline: 0px transparent;
+	background-color: hsl(150, 100%, 66%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* transition: all ease-in-out 200ms; */
+	/* there is a bug when you use transition that create these balck lines  */
+}
+.button:hover {
+	box-shadow: 0px 0px 10px 10px hsla(150, 100%, 66%, 0.535);
+	-webkit-box-shadow: 0px 0px 10px 10px hsla(150, 100%, 66%, 0.535);
+	-moz-box-shadow: 0px 0px 10px 10px hsla(150, 100%, 66%, 0.535);
+}
+@media (max-width: 650px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.container {
+		max-width: 90vw;
+		min-height: min(50vh, fit-content);
+	}
+	.advice-container {
+		margin-bottom: 2rem;
+	}
+}
